@@ -1,4 +1,15 @@
 # AI-Powered-Regulatory-Compliance-Checker-for-Contracts
+
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+
+[![Python](https://img.shields.io/badge/Python-3.11-blue)](https://www.python.org/)
+
+[![Streamlit](https://img.shields.io/badge/Streamlit-App-red)](https://streamlit.io/)
+
+[![Status](https://img.shields.io/badge/Status-Stable-success)](https://github.com/deepaksharma-hue/AI-Powered-Regulatory-Compliance-Checker-for-Contracts)
+
+
+
 AI-powered system for automated contract compliance analysis using LLMs, detecting GDPR &amp; HIPAA risks, generating safe amendments, and producing audit-ready reports.
 
 ## 🚀 Project Overview
