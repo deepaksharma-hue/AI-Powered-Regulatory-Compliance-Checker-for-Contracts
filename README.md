@@ -91,14 +91,13 @@ Outputs + Notifications + Audit Logs
 - Hard fallback JSON (pipeline never crashes)
 
 ---
-
-⚙️ Installation & Setup
+## ⚙️ Installation & Setup
 
 ### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/springboardmentor587-star/Compliance-Checker.git
 cd Compliance-Checker
-````
+```
 
 ### 2️⃣ Create Virtual Environment
 
