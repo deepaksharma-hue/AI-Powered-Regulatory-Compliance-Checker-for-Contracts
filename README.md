@@ -23,7 +23,7 @@ The system is modular, explainable, reliable, and production-ready.
 - 🛡️ LLM Fail-Safe & Fallback Mechanisms  
 
 ## 🏗️ System Architecture
-
+```
 Streamlit UI  
 ↓  
 Pipeline Orchestrator (run.py)  
@@ -42,6 +42,7 @@ Contract Rebuilding
 ↓  
 Outputs + Notifications + Audit Logs
 
+```
 ## 🧩 Project Structure
 
 ```text
@@ -78,6 +79,8 @@ Outputs + Notifications + Audit Logs
 ├── .env                           # Environment variables (not committed)
 └── README.md
 
+
+```
 ## 🧠 LLM Strategy
 
 ### Primary Model
@@ -86,39 +89,32 @@ Outputs + Notifications + Audit Logs
 ### Fallbacks
 - OpenRouter (LLaMA 3.1 8B)
 - Hard fallback JSON (pipeline never crashes)
-## ⚙️ Installation & Setup
-### 1️⃣ Clone the Repository
-
-```bash
-git clone https://github.com/springboardmentor587-star/Compliance-Checker.git
-cd Compliance-Checker
 
 ---
 
-### 🔸 2️⃣ Create Virtual Environment
+⚙️ Installation & Setup
 
-```md
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/springboardmentor587-star/Compliance-Checker.git
+cd Compliance-Checker
+````
+
 ### 2️⃣ Create Virtual Environment
 
 ```bash
 python -m venv venv
 source venv/bin/activate   # Windows: venv\Scripts\activate
+```
 
----
-
-### 🔸 3️⃣ Install Dependencies
-
-```md
 ### 3️⃣ Install Dependencies
 
 ```bash
 pip install -r requirements.txt
+```
 
 ---
 
-## 🔹 STEP 4: 🔑 Environment Variables
-
-```md
 ## 🔑 Environment Variables (`.env`)
 
 ```env
@@ -140,69 +136,85 @@ OUTPUT_DIR=./data/processed
 # Chunking
 MAX_CHUNK_TOKENS=1500
 CHUNK_OVERLAP=200
+```
 
 ---
 
-## 🔹 STEP 5: ▶️ Running the Application
-
-```md
 ## ▶️ Running the Application
 
-Start the Streamlit UI:
+### Start Streamlit UI
 
 ```bash
 streamlit run app.py
+```
+
+Then open:
+
+```
 http://localhost:8501
+```
+📊 Generated Outputs
+📊 Generated Outputs
+
+| File Type                    | Purpose                    |
+| ---------------------------- | -------------------------- |
+| `_m2_output.json`            | Clause-level risk analysis |
+| `_m2_annotations.csv`        | Clause annotations         |
+| `_m3_compliance_report.json` | Compliance summary         |
+| `_updated_contract.txt`      | Updated contract           |
+| `_updated_contract.pdf`      | Final PDF contract         |
 
 ---
 
-## 🔹 STEP 6: 📊 Generated Outputs (TABLE FORMAT)
-
-```md
-## 📊 Generated Outputs
-
-| File | Purpose |
-|----|----|
-| `_m2_output.json` | Clause-level risk analysis |
-| `_m2_annotations.csv` | Clause annotations |
-| `_m3_compliance_report.json` | Compliance summary |
-| `_updated_contract.txt` | Updated contract |
-| `_updated_contract.pdf` | Final contract PDF |
 ## 🔔 Notifications & Integrations
 
-- **Slack** → High-risk issues, regulatory updates, failures  
-- **Email** → High/Critical severity alerts and contract updates  
-- **Google Sheets** →
-  - Contracts Overview
-  - Compliance Issues
-  - Audit Logs
+* **Slack** → High-risk issues, regulatory updates, failures
+* **Email** → High/Critical severity or contract updates
+* **Google Sheets** →
+
+  * Contracts Overview
+  * Compliance Issues
+  * Audit Logs
+
+---
+
 ## 🧪 Reliability & Fail-Safe Design
 
-- Pipeline never crashes on LLM failure
-- Safe default outputs
-- Severity-based automation
-- Full audit trail for compliance
+* Pipeline never crashes on LLM failure
+* Safe default outputs
+* Severity-based automation
+* Full audit trail for compliance
+
+---
+
 ## 🌱 Future Enhancements
 
-- Retrieval-Augmented Generation (RAG)
-- Support for more regulations (ISO, SOC2, PCI-DSS)
-- Multilingual contract analysis
-- Human approval workflows
-- Continuous monitoring of active contracts
-- Cloud deployment with REST APIs
+* Retrieval-Augmented Generation (RAG)
+* Support for more regulations (ISO, SOC2, PCI-DSS)
+* Multilingual contract analysis
+* Human approval workflows
+* Continuous monitoring of active contracts
+* Cloud deployment with REST APIs
+
+
+---
+
 ## 📄 License
 
 This project is licensed under the **MIT License**.
 
+---
+
 
 ## 👥 Contributors
 
-- **Charan** – Project Lead & Mentor  
+- **Charan** – Project Lead & Mentor
+ 
 
 Feel free to fork this repository, raise issues, or submit pull requests.
 
 
+---
 
-Fix README formatting and add detailed documentation
-
+⭐ **If you like this project, give it a star on GitHub!**
 
