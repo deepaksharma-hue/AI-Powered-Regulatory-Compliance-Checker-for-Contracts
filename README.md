@@ -44,6 +44,7 @@ Outputs + Notifications + Audit Logs
 
 ## 🧩 Project Structure
 
+```text
 .
 ├── app.py                         # Streamlit UI
 ├── run.py                         # Main pipeline orchestrator
@@ -72,9 +73,136 @@ Outputs + Notifications + Audit Logs
 │       ├── cleaner.py
 │       ├── annotate_csv.py
 │       └── pdf_writer.py
-├── results/
-├── data/
-├── .env
+├── results/                       # Generated outputs
+├── data/                          # Regulatory snapshots
+├── .env                           # Environment variables (not committed)
 └── README.md
+
+## 🧠 LLM Strategy
+
+### Primary Model
+- **Groq** – `llama-3.3-70b-versatile`
+
+### Fallbacks
+- OpenRouter (LLaMA 3.1 8B)
+- Hard fallback JSON (pipeline never crashes)
+## ⚙️ Installation & Setup
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/springboardmentor587-star/Compliance-Checker.git
+cd Compliance-Checker
+
+---
+
+### 🔸 2️⃣ Create Virtual Environment
+
+```md
+### 2️⃣ Create Virtual Environment
+
+```bash
+python -m venv venv
+source venv/bin/activate   # Windows: venv\Scripts\activate
+
+---
+
+### 🔸 3️⃣ Install Dependencies
+
+```md
+### 3️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+
+---
+
+## 🔹 STEP 4: 🔑 Environment Variables
+
+```md
+## 🔑 Environment Variables (`.env`)
+
+```env
+# LLM Keys
+GROQ_API_KEY=your_groq_key
+OPENROUTER_API_KEY=your_openrouter_key
+
+# Email
+SENDER_EMAIL=your_email@gmail.com
+EMAIL_APP_PASSWORD=your_app_password
+
+# Slack
+SLACK_WEBHOOK_URL=your_slack_webhook
+
+# Directories
+RAW_DIR=./data/raw
+OUTPUT_DIR=./data/processed
+
+# Chunking
+MAX_CHUNK_TOKENS=1500
+CHUNK_OVERLAP=200
+
+---
+
+## 🔹 STEP 5: ▶️ Running the Application
+
+```md
+## ▶️ Running the Application
+
+Start the Streamlit UI:
+
+```bash
+streamlit run app.py
+http://localhost:8501
+
+---
+
+## 🔹 STEP 6: 📊 Generated Outputs (TABLE FORMAT)
+
+```md
+## 📊 Generated Outputs
+
+| File | Purpose |
+|----|----|
+| `_m2_output.json` | Clause-level risk analysis |
+| `_m2_annotations.csv` | Clause annotations |
+| `_m3_compliance_report.json` | Compliance summary |
+| `_updated_contract.txt` | Updated contract |
+| `_updated_contract.pdf` | Final contract PDF |
+## 🔔 Notifications & Integrations
+
+- **Slack** → High-risk issues, regulatory updates, failures  
+- **Email** → High/Critical severity alerts and contract updates  
+- **Google Sheets** →
+  - Contracts Overview
+  - Compliance Issues
+  - Audit Logs
+## 🧪 Reliability & Fail-Safe Design
+
+- Pipeline never crashes on LLM failure
+- Safe default outputs
+- Severity-based automation
+- Full audit trail for compliance
+## 🌱 Future Enhancements
+
+- Retrieval-Augmented Generation (RAG)
+- Support for more regulations (ISO, SOC2, PCI-DSS)
+- Multilingual contract analysis
+- Human approval workflows
+- Continuous monitoring of active contracts
+- Cloud deployment with REST APIs
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+
+## 👥 Contributors
+
+- **Charan** – Project Lead & Mentor  
+
+Feel free to fork this repository, raise issues, or submit pull requests.
+
+
+
+Fix README formatting and add detailed documentation
 
 
